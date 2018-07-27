@@ -9,9 +9,40 @@ namespace SwinAdventure.UnitTests.Services
     public class Tests
     {
         [Test]
-        public void Test1()
+        public void TestAreYou()
         {
-            Assert.True(true);
+            IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
+            Assert.IsTrue(id.AreYou("id1"));
+            Assert.IsTrue(id.AreYou("id2"));
+        }
+
+        [Test]
+        public void TestNotAreYou()
+        {
+            IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
+            Assert.IsFalse(id.AreYou("id3"));
+        }
+
+        [Test]
+        public void TestCaseSensitive()
+        {
+            IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
+            Assert.IsTrue(id.AreYou("ID1"));
+        }
+
+        [Test]
+        public void TestFirstId()
+        {
+            IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
+            Assert.IsTrue(id.FirstId == "id1");
+        }
+
+        [Test]
+        public void TestAddId()
+        {
+            IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
+            id.AddIdentiﬁer("id3");
+            Assert.IsTrue(id.AreYou("id3"));
         }
     }
 }

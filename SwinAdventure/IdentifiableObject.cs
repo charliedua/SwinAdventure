@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SwinAdventure
 {
-    class IdentifiableObject
+    public class IdentifiableObject
     {
         private List<string> _identifiers;
 
-        string FirstId
+        public string FirstId
         {
             get
             {
@@ -29,15 +29,12 @@ namespace SwinAdventure
 
         public void AddIdentiﬁer(string id)
         {
-            _identifiers.ForEach(delegate (string item)
-            {
-                item.ToLower();
-            });
+            _identifiers.Add(id.ToLower());
         }
 
         public bool AreYou(string id)
         {
-            return _identifiers.Contains(id);
+            return _identifiers.Contains(id.ToLower());
         }
     }
 }
