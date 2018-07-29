@@ -28,12 +28,12 @@ namespace SwinAdventure
 
         }
 
-        public Item Take()
+        public Item Take(string id)
         {
 
         }
 
-        public Item Fetch()
+        public Item Fetch(string id)
         {
             
         }
