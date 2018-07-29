@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="GameObject.cs" />
     <Compile Include="IdentifiableObject.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
