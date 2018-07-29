@@ -62,15 +62,12 @@ namespace SwinAdventure.UnitTests.Services
             Item shovel = new Item(new string[] { "shovel", "spade" },
                 "a shovel",
                 "This is a might fine ...");
+            Item pan = new Item(new string[] { "pan" }, "a pan", "This is awesome");
             Inventory inventory = new Inventory();
             inventory.Put(shovel);
-            Item newitem = inventory.Take("shovel");
-            Assert.True(newitem.FirstId == shovel.FirstId,
-                "Item can't be taken after putting");
-            Assert.False(inventory.HasItem("shovel"),
-                "Item was't removed from inventory");
+            inventory.Put(pan);
+            Assert.True(inventory.ItemList == $"\t{shovel.ShortDescription}\n" +
+                $"\t{pan.ShortDescription}\n");
         }
-
-
     }
 }
