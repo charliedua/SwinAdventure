@@ -45,14 +45,4 @@ namespace SwinAdventure.UnitTests.Services
             Assert.IsTrue(id.AreYou("id3"));
         }
     }
-
-    [TestFixture]
-    public class GameObjectTests
-    {
-        [Test]
-        public void ConstructorTest()
-        {
-
-        }
-    }
 }
