@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace SwinAdventure.UnitTests.Services
 {
     [TestFixture]
-    public class Tests
+    public class IdentifiableObjectTests
     {
         [Test]
         public void TestAreYou()
@@ -43,6 +43,16 @@ namespace SwinAdventure.UnitTests.Services
             IdentifiableObject id = new IdentifiableObject(new string[] { "id1", "id2" });
             id.AddIdentiﬁer("id3");
             Assert.IsTrue(id.AreYou("id3"));
+        }
+    }
+
+    [TestFixture]
+    public class GameObjectTests
+    {
+        [Test]
+        public void ConstructorTest()
+        {
+
         }
     }
 }
