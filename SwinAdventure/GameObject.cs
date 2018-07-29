@@ -23,7 +23,7 @@
         {
             get
             {
-                return $"Name: {Name}\nId: {FirstId}";
+                return $"a {ShortDescription} ({FirstId})";
             }
         }
 
