@@ -21,7 +21,7 @@ namespace SwinAdventure.UnitTests.Services
             Item shovel = new Item(new string[] { "shovel", "spade" },
                 "a shovel",
                 "This is a might fine ...");
-            Assert.True(shovel.ShortDescription == "a shovel (shovel)", 
+            Assert.True(shovel.ShortDescription == "a shovel(shovel)", 
                 "Short description is not correct!");
         }
 
