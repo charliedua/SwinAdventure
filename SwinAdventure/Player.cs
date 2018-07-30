@@ -19,18 +19,8 @@
 
         public GameObject Locate(string id)
         {
-            if (_inventory.HasItem(id))
-            {
-                return _inventory.Fetch(id);
-            }
-            else if (id == "me" || id == "inventory")
-            {
-                return this;
-            }
-            else
-            {
-                return null;
-            }
+            if (AreYou(id)) return this;
+            return _inventory.Fetch(id);
         }
     }
 }

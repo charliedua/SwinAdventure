@@ -44,7 +44,14 @@ namespace SwinAdventure
 
         public Item Fetch(string id)
         {
-            return _items.First(_item => _item.FirstId == id);
+            foreach (var item in _items)
+            {
+                if (item.AreYou(id))
+                {
+                    return item;
+                }
+            }
+            return null;
         }
     }
 }

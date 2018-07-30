@@ -4,28 +4,13 @@
     {
         private string _name;
 
-        public string Name
-        {
-            get { return _name; }
-        }
+        public string Name => _name;
 
         private string _description;
 
-        public virtual string FullDescription
-        {
-            get
-            {
-                return _description;
-            }
-        }
+        public virtual string FullDescription => _description;
 
-        public string ShortDescription
-        {
-            get
-            {
-                return $"a {ShortDescription} ({FirstId})";
-            }
-        }
+        public string ShortDescription => $"{Name} ({FirstId})";
 
         public GameObject(string[] ids, string name, string desc) : base(ids)
         {
