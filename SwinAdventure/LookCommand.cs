@@ -8,7 +8,17 @@
 
         public override string Execute(Player p, string[] text)
         {
-            throw new System.NotImplementedException();
+            switch (text.Length)
+            {
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    break;
+            }
         }
 
         private IHaveInventory FetchContainer(Player p, string containerId)
