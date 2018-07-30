@@ -15,6 +15,7 @@ namespace SwinAdventure.UnitTests.Services
                 "The item is not identifiable");
         }
 
+        /*
         [Test]
         public void TestShortDescription()
         {
@@ -24,6 +25,7 @@ namespace SwinAdventure.UnitTests.Services
             Assert.True(shovel.ShortDescription == "a shovel(shovel)", 
                 "Short description is not correct!");
         }
+        */
 
         [Test]
         public void TestFullDescription()
