@@ -52,6 +52,7 @@
     <Compile Include="IHaveInventory.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="LookCommand.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

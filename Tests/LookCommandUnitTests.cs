@@ -117,23 +117,33 @@ namespace SwinAdventure.UnitTests.Services
             Player player = new Player("player one", "i am player one");
             string test = command.Execute(player, new string[]
             {
-                "look", "around"
+                "look", "around", "me"
             });
             string expected = "What do you want to look at?";
             Assert.True(test == expected,
                 "Error finding error");
+
             test = command.Execute(player, new string[]
             {
-                "hello"
+                "hello", "this", "is"
             });
             expected = "Error in look input";
             Assert.True(test == expected,
                 "Error finding error");
+
             test = command.Execute(player, new string[]
             {
                 "look", "at", "a", "at", "b"
             });
             expected = "What do you want to look in?";
+            Assert.True(test == expected,
+                "Error finding error");
+
+            test = command.Execute(player, new string[]
+            {
+                "look"
+            });
+            expected = "I don’t know how to look like that";
             Assert.True(test == expected,
                 "Error finding error");
         }
