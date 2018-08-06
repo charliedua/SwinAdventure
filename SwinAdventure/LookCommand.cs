@@ -2,35 +2,56 @@
 {
     public class LookCommand : Command
     {
-        public LookCommand() : base(new string[] { "look"})
+        public LookCommand() : base(new string[] { "look" })
         {
         }
 
-        public override string Execute(Player p, string[] text)
+        public override string Execute(Player player, string[] text)
         {
+            if (text[0].ToLower() != "look")
+                return "Error in look input";
+            if (text[1].ToLower() != "at")
+                return "What do you want to look at?";
             string result = "";
+            IHaveInventory container;
             switch (text.Length)
             {
                 case 3:
+                    container = player as IHaveInventory;
+                    result = LookAtIn(text[2], container);
+                    if (result == null)
+                        return $"I cannot find the {text[2]}";
                     break;
-                case 4:
-                    break;
+
                 case 5:
+                    if (text[3].ToLower() != "in")
+                        return "What do you want to look in?";
+                    container = FetchContainer(player, text[4]);
+                    if (container == null)
+                        return $"I cannot find the {text[4]}";
+                    result = LookAtIn(text[2], container);
+                    if (result == null)
+                        return $"I cannot find the {text[2]} in the {container.Name}";
                     break;
+
                 default:
+                    result = "I don't know how to look like that";
                     break;
             }
             return result;
         }
 
-        private IHaveInventory FetchContainer(Player p, string containerId)
+        private IHaveInventory FetchContainer(Player player, string containerId)
         {
-            return p;
+            return player.Locate(containerId) as IHaveInventory;
         }
 
         private string LookAtIn(string thingId, IHaveInventory container)
         {
-            return "";
+            var thing = container.Locate(thingId);
+            if (thing == null)
+                return null;
+            return thing.FullDescription;
         }
     }
 }

@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwinAdventure
 {
     public class IdentifiableObject
     {
         private List<string> _identifiers;
+
+        public IdentifiableObject(string[] idents)
+        {
+            _identifiers = idents.ToList();
+        }
 
         public string FirstId
         {
@@ -20,11 +22,6 @@ namespace SwinAdventure
                 }
                 return _identifiers.First();
             }
-        }
-
-        public IdentifiableObject(string[] idents)
-        {
-            _identifiers = idents.ToList();
         }
 
         public void AddIdentiﬁer(string id)

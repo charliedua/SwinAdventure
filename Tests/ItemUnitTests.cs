@@ -9,19 +9,19 @@ namespace SwinAdventure.UnitTests.Services
         public void TestItemIsIdentifiable()
         {
             Item shovel = new Item(new string[] { "shovel", "spade" },
-                "a shovel", 
+                "a shovel",
                 "This is a might fine ...");
             Assert.True(shovel.AreYou("shovel"),
                 "The item is not identifiable");
         }
-        
+
         [Test]
         public void TestShortDescription()
         {
             Item shovel = new Item(new string[] { "shovel", "spade" },
                 "a shovel",
                 "This is a might fine ...");
-            Assert.True(shovel.ShortDescription == "a shovel (shovel)", 
+            Assert.True(shovel.ShortDescription == "a shovel (shovel)",
                 "Short description is not correct!");
         }
 
@@ -31,7 +31,7 @@ namespace SwinAdventure.UnitTests.Services
             Item shovel = new Item(new string[] { "shovel", "spade" },
                 "a shovel",
                 "This is a might fine");
-            Assert.True(shovel.FullDescription == "This is a might fine", 
+            Assert.True(shovel.FullDescription == "This is a might fine",
                 "Full description is not correct");
         }
     }

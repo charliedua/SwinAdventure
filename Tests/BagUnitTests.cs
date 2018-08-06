@@ -37,9 +37,10 @@ namespace SwinAdventure.UnitTests.Services
         public void TestBagFullDescription()
         {
             Bag bag = new Bag(new string[] { "chest" }, "Chest", "this is desc");
-            Assert.True((bag.Name + bag.Inventory.ItemList) == bag.FullDescription, 
+            Assert.True((bag.Name + bag.Inventory.ItemList) == bag.FullDescription,
                 "the Full Description is incorrect");
         }
+
         [Test]
         public void TestBagInBag()
         {

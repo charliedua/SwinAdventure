@@ -2,20 +2,17 @@
 {
     public abstract class GameObject : IdentifiableObject
     {
-        private string _name;
-
-        public string Name => _name;
-
         private string _description;
-
-        public virtual string FullDescription => _description;
-
-        public string ShortDescription => $"{Name} ({FirstId})";
+        private string _name;
 
         public GameObject(string[] ids, string name, string desc) : base(ids)
         {
             _name = name;
             _description = desc;
         }
+
+        public virtual string FullDescription => _description;
+        public string Name => _name;
+        public string ShortDescription => $"{Name} ({FirstId})";
     }
 }

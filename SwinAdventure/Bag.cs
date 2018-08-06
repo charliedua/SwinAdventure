@@ -2,23 +2,21 @@
 {
     public class Bag : Item, IHaveInventory
     {
+        private Inventory _inventory;
+
         public Bag(string[] ids, string name, string desc) : base(ids, name, desc)
         {
             _inventory = new Inventory();
         }
 
-        private Inventory _inventory;
+        public override string FullDescription
+        {
+            get { return Name + _inventory.ItemList; }
+        }
+
         public Inventory Inventory
         {
             get { return _inventory; }
-        }
-
-        public override string FullDescription
-        {
-            get
-            {
-                return Name + _inventory.ItemList;
-            }
         }
 
         public GameObject Locate(string id)

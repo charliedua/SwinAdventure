@@ -1,15 +1,9 @@
 ﻿using NUnit.Framework;
-using SwinAdventure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwinAdventure.UnitTests.Services
 {
     [TestFixture]
-    class LookCommandUnitTests
+    internal class LookCommandUnitTests
     {
         [Test]
         public void TestLookAtMe()
@@ -20,10 +14,11 @@ namespace SwinAdventure.UnitTests.Services
                 "a Small Bag",
                 "A bag to store a couple items in. It's not very big...");
             player.Inventory.Put(smallBag);
-            Assert.True(command.Execute(
+            string test = command.Execute(
                 player,
-                new string[] { "look", "at", "inventory" }) ==
-                $"You are carrying:\n{player.Inventory.ItemList}",
+                new string[] { "look", "at", "inventory" });
+            string expected = $"You are carrying:\n{player.Inventory.ItemList}";
+            Assert.True(test == expected,
                 "The Look command can't look at the person");
         }
 
@@ -32,12 +27,12 @@ namespace SwinAdventure.UnitTests.Services
         {
             LookCommand command = new LookCommand();
             Player player = new Player("player one", "i am player one");
-            Item Gem = new Item(new string[] { "gem" }, "a Gem", "Desc for Gem");
-            player.Inventory.Put(Gem);
+            Item gem = new Item(new string[] { "gem" }, "a Gem", "Desc for Gem");
+            player.Inventory.Put(gem);
             Assert.True(command.Execute(
                 player,
                 new string[] { "look", "at", "gem" }) ==
-                $"You are carrying:\n\t{Gem.FullDescription}",
+                gem.FullDescription,
                 "The Look command can't look at item");
         }
 
@@ -47,7 +42,7 @@ namespace SwinAdventure.UnitTests.Services
             LookCommand command = new LookCommand();
             Player player = new Player("player one", "i am player one");
             var test = command.Execute(player, new string[] { "look", "at", "gem" });
-            var expected = "I can't find the gem";
+            var expected = "I cannot find the gem";
             Assert.True(test == expected, "The command can't find nothing");
         }
 
@@ -62,7 +57,7 @@ namespace SwinAdventure.UnitTests.Services
             {
                 "look", "at", "gem", "in", "inventory"
             });
-            string expected = $"You are carrying:\n\t{Gem.FullDescription}";
+            string expected = Gem.FullDescription;
             Assert.True(test == expected,
                 "can't look at gem in inventory");
         }
@@ -78,9 +73,9 @@ namespace SwinAdventure.UnitTests.Services
             player.Inventory.Put(bag);
             string test = command.Execute(player, new string[]
             {
-                "look", "at", "gem", "in", "bag"
+                "look", "at", "gem", "in", "chest"
             });
-            string expected = $"You are carrying:\n\t{gem.FullDescription}";
+            string expected = gem.FullDescription;
             Assert.True(expected == test,
                 "Can't look at gem in bag");
         }
@@ -94,7 +89,7 @@ namespace SwinAdventure.UnitTests.Services
             {
                 "look", "at", "gem", "in", "bag"
             });
-            string expected = "I can't find the bag";
+            string expected = "I cannot find the bag";
             Assert.True(expected == test,
                 "Can't generate errors for no bag");
         }
@@ -108,11 +103,11 @@ namespace SwinAdventure.UnitTests.Services
             player.Inventory.Put(bag);
             string test = command.Execute(player, new string[]
             {
-                "look", "at", "gem", "in", "bag"
+                "look", "at", "gem", "in", "chest"
             });
-            string expected = "I can't find the gem";
+            string expected = "I cannot find the gem in the Chest";
             Assert.True(expected == test,
-                "Can't generate errors for no gem in bag");
+                "Can't generate errors for no gem in the ");
         }
 
         [Test]
@@ -125,7 +120,7 @@ namespace SwinAdventure.UnitTests.Services
                 "look", "around"
             });
             string expected = "What do you want to look at?";
-            Assert.True(test == expected, 
+            Assert.True(test == expected,
                 "Error finding error");
             test = command.Execute(player, new string[]
             {

@@ -4,17 +4,17 @@
     {
         private Inventory _inventory;
 
-        public Inventory Inventory
+        public Player(string name, string desc) :
+            base(new string[] { "me", "inventory" }, name, desc)
         {
-            get { return _inventory; }
+            _inventory = new Inventory();
         }
 
         public override string FullDescription => "You are carrying:\n" + Inventory.ItemList;
 
-        public Player(string name, string desc) : 
-            base(new string[] { "me", "inventory"}, name, desc)
+        public Inventory Inventory
         {
-            _inventory = new Inventory();
+            get { return _inventory; }
         }
 
         public GameObject Locate(string id)
