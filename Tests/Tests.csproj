@@ -55,6 +55,7 @@
     <Compile Include="IdentifiableObjectTests.cs" />
     <Compile Include="InventoryUnitTests.cs" />
     <Compile Include="ItemUnitTests.cs" />
+    <Compile Include="LocationTests.cs" />
     <Compile Include="LookCommandUnitTests.cs" />
     <Compile Include="PlayerUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

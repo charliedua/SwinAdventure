@@ -1,24 +1,23 @@
 ﻿namespace SwinAdventure
 {
-    public class Location : IdentifiableObject
+    public class Location : GameObject, IHaveInventory
     {
-        private string _name;
-        private string _desc;
+        private Inventory _inverntory;
 
-        public Location(string[] idents) : base(idents)
+        public Location(string[] idents, string name, string desc) : base(idents, name, desc)
         {
+            Inventory = new Inventory();
         }
 
-        public string Name
+        public Inventory Inventory
         {
-            get { return _name; }
-            set { _name = value; }
+            get { return _inverntory; }
+            set { _inverntory = value; }
         }
 
-        public string Description
+        public GameObject Locate(string id)
         {
-            get { return _desc; }
-            set { _desc = value; }
+            return _inverntory.Fetch(id);
         }
     }
 }

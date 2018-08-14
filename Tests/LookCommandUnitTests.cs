@@ -3,7 +3,7 @@
 namespace SwinAdventure.UnitTests.Services
 {
     [TestFixture]
-    internal class LookCommandUnitTests
+    public class LookCommandUnitTests
     {
         [Test]
         public void TestLookAtMe()
