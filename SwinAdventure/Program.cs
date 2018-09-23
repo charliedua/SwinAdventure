@@ -21,6 +21,10 @@ namespace SwinAdventure
             Item item3 = new Item(new string[] { "item3" }, "item3", "this is item 3");
             bag.Inventory.Put(item3);
             player.Inventory.Put(bag);
+            Item item4 = new Item(new string[] { "item4" }, "item4", "this is item 4");
+            Location location = new Location(new string[] { "home" }, "home", "this is home");
+            location.Inventory.Put(item4);
+            player.Location = location;
             while (true)
             {
                 Console.Write("Please enter your command here > ");

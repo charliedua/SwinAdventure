@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="SwinAdventure.Bag">
-    <Position X="5.25" Y="10.5" Width="3" />
+    <Position X="7.75" Y="10.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAgQAAAA=</HashCode>
       <FileName>Bag.cs</FileName>
@@ -16,7 +16,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SwinAdventure.GameObject">
-    <Position X="5" Y="3.75" Width="3.75" />
+    <Position X="6.75" Y="3.75" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAgAAAAEAAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
@@ -37,14 +37,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SwinAdventure.Item">
-    <Position X="5.25" Y="8.25" Width="3.25" />
+    <Position X="7.5" Y="8.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SwinAdventure.Location">
-    <Position X="8.75" Y="8.25" Width="4.25" />
+    <Position X="11" Y="8.25" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAA=</HashCode>
       <FileName>Location.cs</FileName>
@@ -52,16 +52,16 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SwinAdventure.LookCommand">
-    <Position X="0.5" Y="5.75" Width="4.25" />
+    <Position X="2.25" Y="5.75" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
       <FileName>LookCommand.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SwinAdventure.Player">
-    <Position X="2.5" Y="8.25" Width="2.5" />
+    <Position X="4.75" Y="8.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAgQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAIAAAIAAAAAABAAAACAACAAAgQAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -73,8 +73,22 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SwinAdventure.Path">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.MoveCommand">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="SwinAdventure.IHaveInventory">
-    <Position X="10" Y="3.75" Width="2.25" />
+    <Position X="11.5" Y="1.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>IHaveInventory.cs</FileName>

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Bag.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="Direction.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IdentifiableObject.cs" />
     <Compile Include="IHaveInventory.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="Item.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="LookCommand.cs" />
+    <Compile Include="MoveCommand.cs" />
+    <Compile Include="Path.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

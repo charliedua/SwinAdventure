@@ -17,12 +17,19 @@ namespace SwinAdventure.UnitTests.Services
         [Test]
         public static void LocateTest()
         {
-            Item item = new Item(new string[] { "id" }, "name", "description");
+            Item item = new Item(new string[] { "item" }, "name", "description");
             Location location = new Location(new string[] { "id" }, "Name", "description");
             location.Inventory.Put(item);
-            var test = location.Locate("id");
+            var test = location.Locate("item");
             var expected = item;
             Assert.AreEqual(test, expected, "the item is not returned correctly");
+        }
+
+        [Test]
+        public static void IndentifyThemselvesTest()
+        {
+            Location location = new Location(new string[] { "id" }, "Name", "description");
+            Assert.NotNull(location.Locate("id"));
         }
     }
 }

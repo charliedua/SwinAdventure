@@ -11,7 +11,7 @@
             if (!(text.Length == 3 || text.Length == 5))
                 return "I don’t know how to look like that";
             if (text[0].ToLower() != "look")
-                return "Error in look input";
+                return player.Location.ShortDescription;
             if (text[1].ToLower() != "at")
                 return "What do you want to look at?";
             string result = "";

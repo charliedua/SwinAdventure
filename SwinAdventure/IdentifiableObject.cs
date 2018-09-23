@@ -12,17 +12,7 @@ namespace SwinAdventure
             _identifiers = idents.ToList();
         }
 
-        public string FirstId
-        {
-            get
-            {
-                if (_identifiers.Count == 0)
-                {
-                    return "";
-                }
-                return _identifiers.First();
-            }
-        }
+        public string FirstId => _identifiers.Count == 0 ? "" : _identifiers.First();
 
         public void AddIdentiﬁer(string id)
         {
