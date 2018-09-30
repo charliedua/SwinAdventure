@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SwinAdventure
 {
-    class Direction
+    internal class Direction : IdentifiableObject
     {
+        private Path Path { get; set; }
+
+        public Direction(string[] idents) : base(idents)
+        {
+            Path = new Path(, idents);
+        }
     }
 }

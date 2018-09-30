@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SwinAdventure
 {
@@ -11,8 +12,6 @@ namespace SwinAdventure
             Console.Write("please enter your description: ");
             string desc = Console.ReadLine();
             Player player = new Player(name, desc);
-            name = null;
-            desc = null;
             Item item1 = new Item(new string[] { "item1" }, "item1", "this is item 1");
             Item item2 = new Item(new string[] { "item2" }, "item2", "this is item 2");
             player.Inventory.Put(item1);
@@ -22,16 +21,17 @@ namespace SwinAdventure
             bag.Inventory.Put(item3);
             player.Inventory.Put(bag);
             Item item4 = new Item(new string[] { "item4" }, "item4", "this is item 4");
-            Location location = new Location(new string[] { "home" }, "home", "this is home");
-            location.Inventory.Put(item4);
-            player.Location = location;
+            Location Home = new Location(new string[] { "home" }, "Home", "This is where you live");
+            Location Shop = new Location(new string[] { }, "Shop", "You can shop it");
+            Home.Inventory.Put(new Path(new string[] { "north", "n" }, "North", "You go through a Door", Home, Shop));
+            Shop.Inventory.Put(new Path(new string[] { "south", "s" }, "South", "You go through a Door", Shop, Home));
+            player.Location = Home;
+            CommandProcessor processor = new CommandProcessor();
             while (true)
             {
-                Console.Write("Please enter your command here > ");
+                Console.Write("Command $ ");
                 string commandText = Console.ReadLine();
-                Command command = new LookCommand();
-                var commandText_split = commandText.Split(new char[] { ' ' });
-                Console.WriteLine(command.Execute(player, commandText_split));
+                Console.WriteLine(processor.Invoke(player, commandText));
             }
         }
     }

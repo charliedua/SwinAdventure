@@ -5,20 +5,18 @@ using System.Text;
 
 namespace SwinAdventure
 {
-    public class Path : IdentifiableObject
+    public class Path : Item
     {
-        private Location _destination;
+        private readonly Location _destination;
+        private readonly Location _source;
 
-        public Path(string[] idents) : base(idents)
+        public Path(string[] idents, string name, string desc, Location source, Location destination) : base(idents, name, desc)
         {
+            _destination = destination;
+            _source = source;
         }
 
-        public Path(Location location, string[] idents) : base(idents)
-        {
-            _destination = location;
-        }
-
-        public Location Destination => _destination;
+        public Location Destination { get => _destination; }
 
         public void Move(Player player)
         {

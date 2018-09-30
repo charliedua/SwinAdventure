@@ -29,7 +29,7 @@ namespace SwinAdventure
         public GameObject Locate(string id)
         {
             if (AreYou(id)) return this;
-            var fetchedObj = _inventory.Fetch(id);
+            Item fetchedObj = _inventory.Fetch(id);
             if (fetchedObj != null) return fetchedObj;
             if (Location == null) return null;
             return Location.Locate(id);
