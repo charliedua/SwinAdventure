@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SwinAdventure.Path" Collapsed="true">
+    <Position X="4.25" Y="5.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.Bag" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAgQAAAA=</HashCode>
+      <FileName>Bag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SwinAdventure.Command" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.GameObject" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAgAAAAEAAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.IdentifiableObject" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAABAAgAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IdentifiableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.Inventory" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAEAgAAAABAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.Item" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.Location" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAgQAAAA=</HashCode>
+      <FileName>Location.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SwinAdventure.LookCommand" Collapsed="true">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>LookCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.MoveCommand" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.Player" Collapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAIAAAIAAAAAABAAAACAACAAAgQAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SwinAdventure.Program" Collapsed="true">
+    <Position X="7" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwinAdventure.CommandProcessor" Collapsed="true">
+    <Position X="13" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAIAAAAAAAAAAAAAAAAAABAAAAAABAAAAA=</HashCode>
+      <FileName>CommandProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SwinAdventure.IHaveInventory" Collapsed="true">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>IHaveInventory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

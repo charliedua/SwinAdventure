@@ -17,6 +17,7 @@
         public Inventory Inventory
         {
             get { return _inventory; }
+            set { _inventory = value; }
         }
 
         public GameObject Locate(string id)

@@ -6,7 +6,6 @@ namespace SwinAdventure
     {
         private Inventory _inventory;
         private Location _location;
-        private Path _path;
 
         public Player(string name, string desc) :
             base(new string[] { "me", "inventory" }, name, desc)
@@ -16,15 +15,17 @@ namespace SwinAdventure
 
         public override string FullDescription => "You are carrying:\n" + Inventory.ItemList;
 
-        public Inventory Inventory => _inventory;
+        public Inventory Inventory
+        {
+            get => _inventory;
+            set => _inventory = value;
+        }
 
         public Location Location
         {
-            get { return _location; }
-            set { _location = value; }
+            get => _location;
+            set => _location = value;
         }
-
-        public Path Path { get => _path; set => _path = value; }
 
         public GameObject Locate(string id)
         {
